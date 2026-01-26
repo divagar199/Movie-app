@@ -22,7 +22,7 @@ const Row = ({ title, fetchURL, isLargeRow }) => {
           <img
             key={movie.id}
             className={`object-contain transition-transform duration-450 hover:scale-105 cursor-pointer rounded-sm 
-              ${isLargeRow ? "h-[250px]" : "h-[150px]"}`}
+              ${isLargeRow ? "h-62.5" : "h-37.5"}`}
             src={`https://image.tmdb.org/t/p/original${
               isLargeRow ? movie.poster_path : movie.backdrop_path
             }`}
