@@ -39,7 +39,7 @@ const Dashboard = () => {
     const interval = setInterval(() => {
       const randomMovie = allBannerMovies[Math.floor(Math.random() * allBannerMovies.length)];
       setBannerMovie(randomMovie);
-    }, 5000); 
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, [allBannerMovies]);
