@@ -22,7 +22,7 @@ const Login = () => {
 
     try {
 
-     const response = await axios.post('https://netflix-backend-g548.onrender.com/api/', {
+     const response = await axios.post('https://netflix-backend-g548.onrender.com/api/login', {
   email,
   password
 });
