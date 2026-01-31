@@ -3,10 +3,11 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
+
 
 const users = [
     { email: "user@netflix.com", password: "password123" }
