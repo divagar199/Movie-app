@@ -21,7 +21,6 @@ const Row = ({ title, fetchURL, isLargeRow }) => {
         {movies.map((movie) => (
           <img
             key={movie.id}
-            // ✅ FIX: Used h-[250px] and h-[150px] for consistent sizing
             className={`object-contain transition-transform duration-500 hover:scale-105 cursor-pointer rounded-sm 
               ${isLargeRow ? "h-[250px]" : "h-[150px]"}`}
             src={`https://image.tmdb.org/t/p/original${

@@ -19,7 +19,7 @@ const Login = () => {
 
     try {
       // ✅ FIX 3: Added "/login" to the end of the URL
-      const response = await axios.post('https://netflix-backend-g548.onrender.com/api/login', {
+     const response = await axios.post('https://movie-app-j186.onrender.com/api/login', {
         email,
         password
       });

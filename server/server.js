@@ -4,23 +4,21 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// ✅ FIX 1: Use Render's Port (Required for deployment)
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
 
-// Mock Database
+// Database
 const users = [
     { email: "user@netflix.com", password: "password123" }
 ];
 
-// ✅ FIX 2: Add a root route to test server status
 app.get('/', (req, res) => {
     res.send("Netflix Backend is working!");
 });
 
-// Signup Route
+// Signup
 app.post('/api/signup', (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) return res.status(400).json({ success: false, message: "All fields are required." });
@@ -34,7 +32,7 @@ app.post('/api/signup', (req, res) => {
     return res.status(201).json({ success: true, message: "Account created successfully!" });
 });
 
-// Login Route
+// Login 
 app.post('/api/login', (req, res) => {
     const { email, password } = req.body;
     const user = users.find(u => u.email === email && u.password === password);
@@ -47,5 +45,5 @@ app.post('/api/login', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });

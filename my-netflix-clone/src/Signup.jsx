@@ -13,10 +13,10 @@ const Signup = () => {
     setError('');
 
     try {
-    const response = await axios.post('https://netflix-backend-g548.onrender.com/api/signup', {
-  email,
-  password
-})
+    const response = await axios.post('https://movie-app-j186.onrender.com/api/signup', {
+        email,
+        password
+      });
 
       if (response.data.success) {
         alert("Account created! Please log in.");
