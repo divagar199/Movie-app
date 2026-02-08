@@ -37,7 +37,7 @@ const Signup = () => {
       
         <div className="flex justify-between items-center px-6 py-6">
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Logo" className="h-8 md:h-10" />
-          <Link to="/" className="text-white bg-[#e50914] px-4 py-1 rounded font-bold text-sm">Sign In</Link>
+          <Link to="/" className="text-white bg-[#e50914] px-4 py-1 rounded font-bold text-sm">Login</Link>
         </div>
 
 
