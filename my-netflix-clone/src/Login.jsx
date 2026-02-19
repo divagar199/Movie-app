@@ -19,7 +19,7 @@ const Login = () => {
 
     try {
       // ✅ FIX 3: Added "/login" to the end of the URL
-     const response = await axios.post('https://movie-app-j186.onrender.com/api/login', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/login`, {
         email,
         password
       });
